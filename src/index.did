@@ -1,0 +1,32 @@
+type Tenant = record {
+  id : text;
+  occupantGender : text;
+  houseNumber : nat64;
+  vacancy : bool;
+  movedIn : nat64;
+  complain : text;
+  updatedAt : opt nat64;
+  occupantAge : nat64;
+  occupantName : text;
+};
+type TenantPayload = record {
+  occupantGender : text;
+  houseNumber : nat64;
+  vacancy : bool;
+  movedIn : nat64;
+  complain : text;
+  occupantAge : nat64;
+  occupantName : text;
+};
+type _AzleResult = variant { Ok : Tenant; Err : text };
+type _AzleResult_1 = variant { Ok : opt Tenant; Err : text };
+type _AzleResult_2 = variant { Ok : vec Tenant; Err : text };
+service : () -> {
+  addTenant : (TenantPayload) -> (_AzleResult);
+  deleteTenant : (text) -> (_AzleResult_1);
+  getTenant : (text) -> (_AzleResult) query;
+  getTenants : () -> (_AzleResult_2) query;
+  searchTenants : (text) -> (_AzleResult_2) query;
+  setVacancy : (text) -> (_AzleResult);
+  updateTenant : (text, TenantPayload) -> (_AzleResult);
+}
