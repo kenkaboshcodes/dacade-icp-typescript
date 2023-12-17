@@ -87,7 +87,3 @@ Feel free to contribute to the project by submitting issues or pull requests. Fo
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## GitHub Repository
-
-[GitHub Repository](https://github.com/sirmwilu/Tenant-management-system-canister.git)
-
