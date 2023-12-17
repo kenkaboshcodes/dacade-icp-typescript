@@ -91,27 +91,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [GitHub Repository](https://github.com/sirmwilu/Tenant-management-system-canister.git)
 
-dfx canister call canister_tenant_management addTenant '(record {
-    occupantName = "john";
-    occupantAge = 86;
-    occupantGender = "male";
-    complain = "";
-    houseNumber = 89;
-    movedIn = 909882999;
-    vacancy = false;
-})'
-
-dfx canister call canister_tenant_management getTenants '()'
-dfx canister call canister_tenant_management getTenant '("36a52ff5-9b49-42d7-b2a3-451ab243ebe1")'
-dfx canister call canister_tenant_management updateTenant '("36a52ff5-9b49-42d7-b2a3-451ab243ebe1",record {
-    occupantName = "william";
-    occupantAge = 86;
-    occupantGender = "male";
-    complain = "";
-    houseNumber = 89;
-    movedIn = 909882999;
-    vacancy = false;
-} )'
-
-dfx canister call canister_tenant_management searchTenants '("william")' 
-dfx canister call canister_tenant_management setVacancy '("36a52ff5-9b49-42d7-b2a3-451ab243ebe1")' 
